@@ -76,3 +76,87 @@
 .themeToggle:hover {
   opacity: 0.8;
 }
+
+/* ── Hamburger ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  padding: 4px;
+  margin-left: 10px;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #333;
+  border-radius: 2px;
+  transition: transform 0.22s, opacity 0.22s;
+}
+
+.dark .hamburger span {
+  background: #ccc;
+}
+
+.hamburgerOpen span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburgerOpen span:nth-child(2) { opacity: 0; }
+.hamburgerOpen span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Mobile menu ── */
+.mobileMenu {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  background: rgba(235, 235, 235, 0.97);
+  backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.dark .mobileMenu {
+  background: rgba(17, 17, 17, 0.97);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+.mobileMenu a {
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #444;
+  transition: color 0.2s;
+}
+
+.dark .mobileMenu a {
+  color: #aaa;
+}
+
+.mobileMenu a:hover {
+  color: #111;
+}
+
+.dark .mobileMenu a:hover {
+  color: #fff;
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  .nav {
+    padding: 0 20px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
