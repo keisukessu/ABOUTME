@@ -1,11 +1,11 @@
 .hobbies {
-  background: #ffffff;
+  background: #f7f8fa;
   padding: 80px 80px 80px 120px;
   transition: background 0.3s;
 }
 
 .hobbies.dark {
-  background: #161616;
+  background: #111113;
 }
 
 .inner {
@@ -63,9 +63,10 @@
 }
 
 .heading {
-  font-size: 34px;
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-family: 'Amatic SC', cursive;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   line-height: 1.1;
   margin-bottom: 14px;
   color: #111;

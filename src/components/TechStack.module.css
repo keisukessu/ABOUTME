@@ -1,11 +1,11 @@
 .techStack {
-  background: #f7f8fc;
+  background: #ffffff;
   padding: 72px 80px 72px;
   transition: background 0.3s;
 }
 
 .techStack.dark {
-  background: #111118;
+  background: #161618;
 }
 
 /* ── Header ── */
@@ -65,9 +65,10 @@
 }
 
 .heading {
-  font-size: 42px;
-  font-weight: 800;
-  letter-spacing: -0.04em;
+  font-family: 'Amatic SC', cursive;
+  font-size: 58px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   line-height: 1.05;
   color: #111;
   margin-bottom: 18px;

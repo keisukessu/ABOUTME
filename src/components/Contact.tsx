@@ -83,13 +83,6 @@ export default function Contact({ isDark }: { isDark: boolean }) {
           </ul>
         </div>
 
-        {/* Right — decorative */}
-        <div className={styles.right}>
-          <div className={styles.decoCircle}>
-            <span className={styles.decoDot} />
-          </div>
-          <span className={styles.decoSmallDot} />
-        </div>
       </div>
 
       {/* Footer */}

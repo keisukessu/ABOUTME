@@ -1,6 +1,5 @@
 import { useRef, useMemo } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Float } from '@react-three/drei'
 import * as THREE from 'three'
 
 
@@ -83,65 +82,70 @@ function Platform() {
   )
 }
 
-function FloatingCube() {
+function useFloatAnimation(speed: number, floatAmount: number, phase: number, rotateY = 0) {
   const ref = useRef<THREE.Mesh>(null)
+  const baseY = useRef<number | null>(null)
+  useFrame((state) => {
+    if (!ref.current) return
+    if (baseY.current === null) baseY.current = ref.current.position.y
+    ref.current.position.y = baseY.current + Math.sin(state.clock.elapsedTime * speed + phase) * floatAmount
+    if (rotateY !== 0) ref.current.rotation.y += rotateY * 0.01
+  })
+  return ref
+}
+
+function FloatingCube() {
+  const ref = useFloatAnimation(0.6, 0.10, 0, 0.3)
   const gradientTexture = useGradientTexture(GRADIENT_STOPS_YELLOW)
   return (
-    <Float speed={1.4} rotationIntensity={0.8} floatIntensity={0.5}>
-      <mesh ref={ref} position={[-0.85, 1.6, 0]} rotation={[0.5, 0.4, 0]} castShadow>
-        <boxGeometry args={[0.7, 0.7, 0.7]} />
-        <meshStandardMaterial map={gradientTexture} roughness={0.2} metalness={0.1} />
-      </mesh>
-    </Float>
+    <mesh ref={ref} position={[-0.85, 1.6, 0]} rotation={[0.5, 0.4, 0]} castShadow>
+      <boxGeometry args={[0.7, 0.7, 0.7]} />
+      <meshStandardMaterial map={gradientTexture} roughness={0.2} metalness={0.1} />
+    </mesh>
   )
 }
 
 function FloatingSphere() {
+  const ref = useFloatAnimation(0.5, 0.12, 1.0)
   const gradientTexture = useGradientTexture(GRADIENT_STOPS_GRAY)
   return (
-    <Float speed={1.0} rotationIntensity={0.2} floatIntensity={0.7}>
-      <mesh position={[-0.2, 0.2, 0.6]} castShadow>
-        <sphereGeometry args={[0.6, 32, 32]} />
-        <meshStandardMaterial map={gradientTexture} roughness={0.15} metalness={0.0} />
-      </mesh>
-    </Float>
+    <mesh ref={ref} position={[-0.2, 0.2, 0.6]} castShadow>
+      <sphereGeometry args={[0.6, 32, 32]} />
+      <meshStandardMaterial map={gradientTexture} roughness={0.15} metalness={0.0} />
+    </mesh>
   )
 }
 
 function FloatingCone() {
+  const ref = useFloatAnimation(0.55, 0.06, 2.0)
   const gradientTexture = useGradientTexture(GRADIENT_STOPS_GREEN, 'vertical')
   return (
-    <Float speed={1.2} rotationIntensity={0.1} floatIntensity={0.35}>
-      <mesh position={[-0.9, -1.05, 0.3]} castShadow>
-        <coneGeometry args={[0.38, 0.88, 32]} />
-        <meshStandardMaterial map={gradientTexture} roughness={0} metalness={0.2} />
-      </mesh>
-    </Float>
+    <mesh ref={ref} position={[-0.9, -1.05, 0.3]} castShadow>
+      <coneGeometry args={[0.38, 0.88, 32]} />
+      <meshStandardMaterial map={gradientTexture} roughness={0} metalness={0.2} />
+    </mesh>
   )
 }
 
 function FloatingPlane() {
-  const ref = useRef<THREE.Mesh>(null)
+  const ref = useFloatAnimation(0.6, 0.10, 0.5, 0.3)
   const gradientTexture = useGradientTexture(GRADIENT_STOPS_PURPLE)
   return (
-    <Float speed={1.4} rotationIntensity={0.8} floatIntensity={0.5}>
-      <mesh ref={ref} position={[1, -0.75, 0]} rotation={[0.5, 0.4, -0.3]} castShadow>
-        <boxGeometry args={[0.05, 0.8, 0.8]} />
-        <meshStandardMaterial map={gradientTexture} roughness={0} metalness={0} />
-      </mesh>
-    </Float>
+    <mesh ref={ref} position={[1, -0.75, 0]} rotation={[0.5, 0.4, -0.3]} castShadow>
+      <boxGeometry args={[0.05, 0.8, 0.8]} />
+      <meshStandardMaterial map={gradientTexture} roughness={0} metalness={0} />
+    </mesh>
   )
 }
 
 function SmallSphere() {
+  const ref = useFloatAnimation(0.7, 0.14, 3.0)
   const gradientTexture = useGradientTexture(GRADIENT_STOPS_RED)
   return (
-    <Float speed={1.6} rotationIntensity={0.1} floatIntensity={0.9}>
-      <mesh position={[0.8, 1.55, -0.2]} castShadow>
-        <sphereGeometry args={[0.18, 32, 32]} />
-        <meshStandardMaterial map={gradientTexture} roughness={0.2} metalness={0.0} />
-      </mesh>
-    </Float>
+    <mesh ref={ref} position={[0.8, 1.55, -0.2]} castShadow>
+      <sphereGeometry args={[0.18, 32, 32]} />
+      <meshStandardMaterial map={gradientTexture} roughness={0.2} metalness={0.0} />
+    </mesh>
   )
 }
 
@@ -150,7 +154,7 @@ function SceneContent() {
 
   useFrame((state) => {
     if (groupRef.current) {
-      groupRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.2) * 0.08
+      groupRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.1) * 0.06
     }
   })
 

@@ -20,12 +20,6 @@ export default function About({ isDark }: { isDark: boolean }) {
               Web開発やUnityを使ったVR制作などを行っています。<br />
               今はいろいろ学んで作りたいものを実装できる技術力を身につけれるように取り組んでいます。
             </p>
-            <a href="#" className={styles.more}>
-              More About Me
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
           </div>
         </div>
 
