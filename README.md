@@ -8,22 +8,26 @@
   <tr>
     <td align="center"><b>Hero</b></td>
     <td align="center"><b>About</b></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/hero.png" width="500"/></td>
+    <td><img src="docs/screenshots/about.png" width="500"/></td>
+  </tr>
+  <tr>
     <td align="center"><b>Hobbies</b></td>
-  </tr>
-  <tr>
-    <td><img src="docs/screenshots/hero.png" width="260"/></td>
-    <td><img src="docs/screenshots/about.png" width="260"/></td>
-    <td><img src="docs/screenshots/hobbies.png" width="260"/></td>
-  </tr>
-  <tr>
     <td align="center"><b>Skills</b></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/hobbies.png" width="400"/></td>
+    <td><img src="docs/screenshots/skills.png" width="400"/></td>
+  </tr>
+  <tr>
     <td align="center"><b>Certifications</b></td>
     <td align="center"><b>Contact</b></td>
   </tr>
   <tr>
-    <td><img src="docs/screenshots/skills.png" width="260"/></td>
-    <td><img src="docs/screenshots/certifications.png" width="260"/></td>
-    <td><img src="docs/screenshots/contact.png" width="260"/></td>
+    <td><img src="docs/screenshots/certifications.png" width="400"/></td>
+    <td><img src="docs/screenshots/contact.png" width="400"/></td>
   </tr>
 </table>
 

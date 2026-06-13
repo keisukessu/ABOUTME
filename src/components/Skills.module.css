@@ -1,11 +1,11 @@
 .techStack {
-  background: #ffffff;
+  background: #f4f5f7;
   padding: 72px 80px 72px;
   transition: background 0.3s;
 }
 
 .techStack.dark {
-  background: #161618;
+  background: #111113;
 }
 
 /* ── Header ── */

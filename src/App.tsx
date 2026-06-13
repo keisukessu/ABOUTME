@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Hobbies from './components/Hobbies'
+import Works from './components/Works'
 import Skills from './components/Skills'
 import Certifications from './components/Certifications'
 import Contact from './components/Contact'
@@ -26,6 +27,7 @@ export default function App() {
         <Hero isDark={isDark} />
         <FadeInSection><About isDark={isDark} /></FadeInSection>
         <FadeInSection><Hobbies isDark={isDark} /></FadeInSection>
+        <FadeInSection><Works isDark={isDark} /></FadeInSection>
         <FadeInSection><Skills isDark={isDark} /></FadeInSection>
         <FadeInSection><Certifications isDark={isDark} /></FadeInSection>
         <FadeInSection><Contact isDark={isDark} /></FadeInSection>
