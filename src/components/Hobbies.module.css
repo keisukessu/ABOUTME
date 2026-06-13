@@ -306,7 +306,7 @@
   }
 
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -320,6 +320,42 @@
   }
 
   .grid {
-    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .cardImage {
+    height: 90px;
+  }
+
+  .cardIconBadge {
+    width: 30px;
+    height: 30px;
+    bottom: -15px;
+  }
+
+  .cardBody {
+    padding: 22px 8px 10px;
+  }
+
+  .cardCategory {
+    font-size: 8px;
+    margin-bottom: 3px;
+  }
+
+  .cardTitle {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+
+  .cardDesc {
+    font-size: 9.5px;
+    line-height: 1.6;
+    margin-bottom: 7px;
+  }
+
+  .cardTag {
+    font-size: 9px;
+    padding: 2px 7px;
   }
 }

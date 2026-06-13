@@ -1,5 +1,5 @@
-import { useRef, useMemo } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { useRef, useMemo, useEffect } from 'react'
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 
 
@@ -70,6 +70,21 @@ const GRADIENT_STOPS_RED = [
 ]
 
 
+
+function CameraAdjuster() {
+  const { camera, size } = useThree()
+  useEffect(() => {
+    const aspect = size.width / size.height
+    if (aspect < 0.6) {
+      camera.position.set(0.4, -0.2, 11.5)
+    } else if (aspect < 1.0) {
+      camera.position.set(0.4, -0.2, 9.0)
+    } else {
+      camera.position.set(0.4, -0.2, 7.5)
+    }
+  }, [camera, size.width, size.height])
+  return null
+}
 
 function Platform() {
   const gradientTexture = useGradientTexture(GRADIENT_STOPS_BLACK, 'vertical')
@@ -181,6 +196,7 @@ export default function Scene3D({ isDark }: Scene3DProps) {
       camera={{ position: [0.4, -0.2, 7.5], fov: 50 }}
       style={{ width: '100%', height: '100%' }}
     >
+      <CameraAdjuster />
       <ambientLight intensity={isDark ? 1.2 : 2.0} />
       <directionalLight
         position={[5, 8, 5]}
