@@ -331,3 +331,17 @@
     display: none;
   }
 }
+
+@media (max-width: 480px) {
+  .techStack {
+    padding: 48px 20px 0;
+  }
+
+  .heading {
+    font-size: 46px;
+  }
+
+  .grid {
+    gap: 10px;
+  }
+}

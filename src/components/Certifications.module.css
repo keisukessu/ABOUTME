@@ -214,14 +214,31 @@
   }
 
   .heading {
-    font-size: 32px;
-  }
-
-  .plus {
-    display: none;
+    font-size: 46px;
   }
 
   .listSection {
     padding: 20px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .certifications {
+    padding: 48px 20px;
+  }
+
+  .banner {
+    padding: 24px 20px;
+    gap: 20px;
+  }
+
+  .item {
+    gap: 12px;
+    padding: 14px 12px;
+  }
+
+  .itemContent {
+    flex-direction: column;
+    gap: 2px;
   }
 }

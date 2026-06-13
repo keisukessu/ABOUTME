@@ -200,10 +200,20 @@
   }
 
   .heading {
-    font-size: 36px;
+    font-size: 50px;
   }
 
   .footer {
     padding: 18px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .inner {
+    padding: 48px 20px 32px;
+  }
+
+  .heading {
+    font-size: 44px;
   }
 }
