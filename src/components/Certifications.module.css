@@ -1,0 +1,205 @@
+.certifications {
+  background: #f4f3fb;
+  padding: 0 80px 72px;
+  transition: background 0.3s;
+}
+
+.certifications.dark {
+  background: #0e0e1c;
+}
+
+/* ── Banner ── */
+.banner {
+  position: relative;
+  background: #eeedf8;
+  border-radius: 20px;
+  padding: 52px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+
+.dark .banner {
+  background: #1a1a2a;
+}
+
+.bannerLeft {
+  flex: 1;
+  max-width: 440px;
+}
+
+.bannerRight {
+  flex-shrink: 0;
+  width: 200px;
+}
+
+/* ── Section number ── */
+.sectionNum {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #7c6fe0;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+/* ── Heading ── */
+.heading {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.dark .heading {
+  color: #f0f0f0;
+}
+
+.bannerDesc {
+  font-size: 13px;
+  line-height: 1.85;
+  color: #777;
+}
+
+.dark .bannerDesc {
+  color: #888;
+}
+
+/* ── Decorative plus marks ── */
+.plus {
+  position: absolute;
+  color: #7c6fe0;
+  font-size: 20px;
+  font-weight: 300;
+  opacity: 0.35;
+  user-select: none;
+  line-height: 1;
+}
+
+.plus1 { top: 36px; right: 260px; }
+.plus2 { bottom: 40px; right: 300px; }
+.plus3 { top: 60px; right: 180px; opacity: 0.2; font-size: 14px; }
+
+/* ── List section ── */
+.listSection {
+  padding: 0 8px;
+}
+
+.listHeading {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  letter-spacing: 0.02em;
+  margin-bottom: 0;
+  padding-bottom: 14px;
+  border-bottom: 1.5px solid #e0e0ee;
+}
+
+.dark .listHeading {
+  color: #888;
+  border-bottom-color: #2a2a3a;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ── List item ── */
+.item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px dashed #e0e0ee;
+}
+
+.dark .item {
+  border-bottom-color: #252535;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.bullet {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #7c6fe0;
+  opacity: 0.7;
+}
+
+.itemContent {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.itemName {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  letter-spacing: -0.01em;
+}
+
+.dark .itemName {
+  color: #e0e0e0;
+}
+
+.itemDate {
+  font-size: 12.5px;
+  color: #999;
+}
+
+.dark .itemDate {
+  color: #666;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1000px) {
+  .certifications {
+    padding: 0 40px 60px;
+  }
+
+  .banner {
+    padding: 44px 40px;
+  }
+
+  .bannerRight {
+    width: 160px;
+  }
+}
+
+@media (max-width: 700px) {
+  .certifications {
+    padding: 0 24px 52px;
+  }
+
+  .banner {
+    padding: 36px 28px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  .bannerRight {
+    width: 140px;
+    align-self: flex-end;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .plus {
+    display: none;
+  }
+}

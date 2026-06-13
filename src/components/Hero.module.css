@@ -1,0 +1,269 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 80px 0 120px;
+  overflow: hidden;
+  background-color: #ebebeb;
+  transition: background-color 0.3s;
+}
+
+.hero.dark {
+  background-color: #111111;
+}
+
+/* Scroll indicator */
+.scrollIndicator {
+  position: absolute;
+  left: 40px;
+  bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.scrollText {
+  writing-mode: vertical-rl;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: #999;
+}
+
+.dark .scrollText {
+  color: #555;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, #999, transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+.dark .scrollLine {
+  background: linear-gradient(to bottom, #555, transparent);
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.1); }
+}
+
+/* Content */
+.content {
+  flex: 0 0 auto;
+  max-width: 480px;
+  z-index: 10;
+}
+
+.greeting {
+  font-family: 'Amatic SC', cursive;
+  font-size: 28px;
+  font-weight: 700;
+  color: #888;
+  margin-bottom: 4px;
+  letter-spacing: 0.04em;
+}
+
+.dark .greeting {
+  color: #666;
+}
+
+.title {
+  font-family: 'Amatic SC', cursive;
+  font-size: clamp(56px, 7vw, 88px);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  margin-bottom: 28px;
+  color: #111;
+}
+
+.dark .title {
+  color: #f0f0f0;
+}
+
+.role {
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 20px;
+  letter-spacing: 0.01em;
+}
+
+.dark .role {
+  color: #888;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 36px;
+}
+
+.dark .description {
+  color: #666;
+}
+
+/* Languages */
+.languages {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.langLabel {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #999;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-right: 2px;
+}
+
+.dark .langLabel {
+  color: #666;
+}
+
+.langTag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: rgba(124, 111, 224, 0.1);
+  color: #7c6fe0;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.dark .langTag {
+  background: rgba(124, 111, 224, 0.15);
+  color: #a99df5;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: #111;
+  color: #fff;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.dark .btnPrimary {
+  background: #f0f0f0;
+  color: #111;
+}
+
+.btnPrimary:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 24px;
+  border: 1.5px solid rgba(0,0,0,0.25);
+  color: #333;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 400;
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.dark .btnSecondary {
+  border-color: rgba(255,255,255,0.2);
+  color: #ccc;
+}
+
+.btnSecondary:hover {
+  border-color: #111;
+  color: #111;
+  transform: translateY(-1px);
+}
+
+.dark .btnSecondary:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+/* 3D Scene */
+.scene {
+  flex: 1;
+  height: 100vh;
+  max-height: 900px;
+  min-width: 0;
+  max-width: 680px;
+}
+
+/* Social links */
+.socials {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 10;
+}
+
+.socials a {
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.dark .socials a {
+  color: #555;
+}
+
+.socials a:hover {
+  color: #111;
+  transform: translateX(-2px);
+}
+
+.dark .socials a:hover {
+  color: #f0f0f0;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 80px 40px 40px;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+  }
+
+  .scene {
+    width: 100%;
+    height: 50vh;
+    max-width: 100%;
+  }
+
+  .scrollIndicator {
+    display: none;
+  }
+}

@@ -1,0 +1,264 @@
+.contact {
+  background: #ffffff;
+  transition: background 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact.dark {
+  background: #131318;
+}
+
+/* ── Inner layout ── */
+.inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 80px 80px 60px;
+  flex: 1;
+}
+
+.left {
+  flex: 1;
+  max-width: 540px;
+}
+
+.right {
+  flex-shrink: 0;
+  position: relative;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Section number ── */
+.sectionNum {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #7c6fe0;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+.labelRule {
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: #7c6fe0;
+  border-radius: 1px;
+}
+
+/* ── Heading ── */
+.heading {
+  font-size: 46px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: #111;
+  margin-bottom: 18px;
+}
+
+.dark .heading {
+  color: #f0f0f0;
+}
+
+/* ── Description ── */
+.desc {
+  font-size: 13.5px;
+  line-height: 1.85;
+  color: #888;
+  margin-bottom: 44px;
+}
+
+.dark .desc {
+  color: #666;
+}
+
+/* ── Contact list ── */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 460px;
+}
+
+.item {
+  border-top: 1px solid #eee;
+}
+
+.item:last-child {
+  border-bottom: 1px solid #eee;
+}
+
+.dark .item {
+  border-top-color: #222;
+}
+
+.dark .item:last-child {
+  border-bottom-color: #222;
+}
+
+.itemLink {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 4px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.itemLink:hover {
+  opacity: 0.72;
+}
+
+/* ── Icon ── */
+.iconWrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #333;
+}
+
+.dark .iconWrap {
+  background: #222230;
+  color: #ccc;
+}
+
+/* ── Item text ── */
+.itemBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.itemLabel {
+  font-size: 14px;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: -0.01em;
+}
+
+.dark .itemLabel {
+  color: #e0e0e0;
+}
+
+.itemValue {
+  font-size: 13px;
+  color: #7c6fe0;
+}
+
+/* ── External link icon ── */
+.externalIcon {
+  color: #bbb;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.dark .externalIcon {
+  color: #555;
+}
+
+/* ── Decorative elements ── */
+.decoCircle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1.5px solid #e4e2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .decoCircle {
+  border-color: #2a2840;
+}
+
+.decoDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #7c6fe0;
+  opacity: 0.55;
+}
+
+.decoSmallDot {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #7c6fe0;
+  opacity: 0.3;
+}
+
+/* ── Footer ── */
+.footer {
+  border-top: 1px solid #efefef;
+  padding: 20px 80px;
+  text-align: center;
+}
+
+.dark .footer {
+  border-top-color: #1e1e2a;
+}
+
+.footer p {
+  font-size: 12.5px;
+  color: #bbb;
+}
+
+.dark .footer p {
+  color: #444;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1000px) {
+  .inner {
+    padding: 64px 40px 48px;
+  }
+
+  .right {
+    width: 200px;
+    height: 200px;
+  }
+
+  .decoCircle {
+    width: 160px;
+    height: 160px;
+  }
+
+  .footer {
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .inner {
+    flex-direction: column;
+    padding: 52px 24px 40px;
+    gap: 40px;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+
+  .footer {
+    padding: 18px 24px;
+  }
+}

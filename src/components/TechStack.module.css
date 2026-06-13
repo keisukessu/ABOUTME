@@ -1,0 +1,332 @@
+.techStack {
+  background: #f7f8fc;
+  padding: 72px 80px 72px;
+  transition: background 0.3s;
+}
+
+.techStack.dark {
+  background: #111118;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.headerLeft {
+  flex: 1;
+}
+
+.headerRight {
+  flex: 1;
+  padding-top: 40px;
+}
+
+.navDots {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.navDot {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ddd;
+  transition: background 0.2s;
+}
+
+.dark .navDot {
+  background: #3a3a3a;
+}
+
+.navDotActive {
+  background: #7c6fe0;
+  height: 16px;
+  border-radius: 3px;
+}
+
+.dark .navDotActive {
+  background: #7c6fe0;
+}
+
+.sectionNum {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #7c6fe0;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+
+.heading {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: #111;
+  margin-bottom: 18px;
+}
+
+.dark .heading {
+  color: #f0f0f0;
+}
+
+.headerDesc {
+  font-size: 13px;
+  line-height: 1.85;
+  color: #777;
+}
+
+.dark .headerDesc {
+  color: #666;
+}
+
+.howLabel {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #7c6fe0;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.howDesc {
+  font-size: 13px;
+  line-height: 1.85;
+  color: #777;
+}
+
+.dark .howDesc {
+  color: #666;
+}
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  margin-bottom: 0;
+}
+
+/* Top 3 cards: 2 columns each */
+.card:nth-child(1),
+.card:nth-child(2),
+.card:nth-child(3) {
+  grid-column: span 2;
+}
+
+/* Bottom 2 cards: 3 columns each */
+.card:nth-child(4),
+.card:nth-child(5) {
+  grid-column: span 3;
+}
+
+/* ── Card ── */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 22px 22px 24px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
+}
+
+.dark .card {
+  background: #1c1c24;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.09);
+}
+
+.dark .card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.cardIconWrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.dark .cardTitle {
+  color: #f0f0f0;
+}
+
+.cardAccent {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  border-radius: 2px;
+}
+
+.cardDesc {
+  font-size: 11.5px;
+  line-height: 1.7;
+  color: #888;
+  margin-bottom: 18px;
+}
+
+.dark .cardDesc {
+  color: #777;
+}
+
+/* ── Tech icons list ── */
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+}
+
+.techItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.techIcon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.invertIcon {
+  filter: invert(1);
+}
+
+.techName {
+  font-size: 10px;
+  color: #999;
+  text-align: center;
+  white-space: pre-line;
+  line-height: 1.3;
+}
+
+.dark .techName {
+  color: #777;
+}
+
+/* ── Always Learning banner ── */
+.banner {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  min-height: 80px;
+}
+
+.bannerLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.bannerTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #7c6fe0;
+  white-space: nowrap;
+}
+
+.bannerDivider {
+  display: block;
+  width: 1px;
+  height: 18px;
+  background: rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
+}
+
+.dark .bannerDivider {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.bannerText {
+  font-size: 12.5px;
+  color: #888;
+  line-height: 1.6;
+}
+
+.dark .bannerText {
+  color: #666;
+}
+
+.bannerChar {
+  flex-shrink: 0;
+  width: 160px;
+  opacity: 0.85;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1000px) {
+  .header {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .headerRight {
+    padding-top: 0;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card:nth-child(1),
+  .card:nth-child(2),
+  .card:nth-child(3),
+  .card:nth-child(4),
+  .card:nth-child(5) {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .techStack {
+    padding: 60px 32px 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card:nth-child(n) {
+    grid-column: span 1;
+  }
+
+  .bannerLeft {
+    flex-wrap: wrap;
+  }
+
+  .bannerChar {
+    display: none;
+  }
+}
