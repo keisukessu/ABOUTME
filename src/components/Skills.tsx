@@ -1,4 +1,4 @@
-import styles from './TechStack.module.css'
+import styles from './Skills.module.css'
 
 const D = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons'
 
@@ -136,14 +136,14 @@ const categories: Category[] = [
 ]
 
 
-export default function TechStack({ isDark }: { isDark: boolean }) {
+export default function Skills({ isDark }: { isDark: boolean }) {
   return (
     <section id="skills" className={`${styles.techStack} ${isDark ? styles.dark : ''}`}>
       {/* Header */}
       <div className={styles.header}>
         <div className={styles.headerLeft}>
           <span className={styles.sectionNum}>03</span>
-          <h2 className={styles.heading}>Tech Stack</h2>
+          <h2 className={styles.heading}>Skills</h2>
           <p className={styles.headerDesc}>
             これまでの学習や開発経験で触れた技術スタックです。
           </p>
