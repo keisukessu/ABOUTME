@@ -76,7 +76,7 @@ function CameraAdjuster() {
   useEffect(() => {
     const aspect = size.width / size.height
     if (aspect < 0.6) {
-      camera.position.set(0.4, -0.2, 11.5)
+      camera.position.set(0.9, -0.2, 11.5)
     } else if (aspect < 1.0) {
       camera.position.set(0.4, -0.2, 9.0)
     } else {
