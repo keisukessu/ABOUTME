@@ -15,7 +15,7 @@ interface Project {
 const projects: Project[] = [
   {
     title: 'Mystery Cook',
-    description: '世界のマイナーな料理をガチャ形式で提案するWebアプリ。未知の料理との偶然の出会いをテーマに、Python バックエンドと React フロントエンドで構築。',
+    description: '世界のマイナーな料理をガチャ形式で提案するWebアプリ。いつもと違う料理をしてみたい人向けに、Python バックエンドと React フロントエンドで構築。',
     techs: ['Python', 'FastAPI', 'TypeScript', 'React'],
     url: 'https://github.com/keisukessu/Mystery-cook',
     accentColor: '#f59e0b',

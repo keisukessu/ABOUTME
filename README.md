@@ -1,6 +1,7 @@
 # Portfolio — Keisuke Sonoyama
 
-個人ポートフォリオサイトです。React + Three.js で構築し、Cloudflare Pages でホストしています。
+個人ポートフォリオサイトです。React + Three.js で構築し、Cloudflare Pagesにデプロイしています。
+ポートフォリオサイト：https://aboutme-ckn.pages.dev/
 
 ## デモ
 
@@ -35,7 +36,8 @@
 
 | カテゴリ | 技術 |
 |----------|------|
-| フレームワーク | React 18 + TypeScript |
+| 言語 |  TypeScript  |
+| フレームワーク | React 18 |
 | ビルド | Vite |
 | 3D | Three.js / @react-three/fiber / @react-three/drei |
 | スタイリング | CSS Modules |
@@ -44,7 +46,7 @@
 ## セクション構成
 
 - **Hero** — 3Dシーンと自己紹介
-- **About** — プロフィール・経歴
+- **About** — プロフィール
 - **Hobbies** — 趣味カード一覧
 - **Skills** — 経験のある技術
 - **Certifications** — 取得資格
@@ -79,7 +81,7 @@ src/
 │   ├── Skills.tsx / .module.css
 │   ├── Certifications.tsx / .module.css
 │   ├── Contact.tsx / .module.css
-│   └── FadeInSection.tsx    # Intersection Observer アニメーション
+│   └── FadeInSection.tsx    # フェードインアニメーション
 ├── App.tsx
 ├── main.tsx
 └── index.css
