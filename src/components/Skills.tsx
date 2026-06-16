@@ -142,7 +142,7 @@ export default function Skills({ isDark }: { isDark: boolean }) {
       {/* Header */}
       <div className={styles.header}>
         <div className={styles.headerLeft}>
-          <span className={styles.sectionNum}>03</span>
+          <span className={styles.sectionNum}>04</span>
           <h2 className={styles.heading}>Skills</h2>
           <p className={styles.headerDesc}>
             これまでの学習や開発経験で触れた技術スタックです。

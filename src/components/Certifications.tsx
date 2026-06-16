@@ -21,7 +21,7 @@ export default function Certifications({ isDark }: { isDark: boolean }) {
       {/* Hero banner */}
       <div className={styles.banner}>
         <div className={styles.bannerLeft}>
-          <span className={styles.sectionNum}>04</span>
+          <span className={styles.sectionNum}>05</span>
           <h2 className={styles.heading}>Certifications</h2>
           <p className={styles.bannerDesc}>
             これまでに取得した資格です。

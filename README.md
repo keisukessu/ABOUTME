@@ -6,21 +6,26 @@
 
 ## デモ
 
+<div align="center">
+  <b>Hero</b><br/>
+  <img src="docs/screenshots/hero.png" width="800"/>
+</div>
+
 <table>
   <tr>
-    <td align="center"><b>Hero</b></td>
     <td align="center"><b>About</b></td>
-  </tr>
-  <tr>
-    <td><img src="docs/screenshots/hero.png" width="500"/></td>
-    <td><img src="docs/screenshots/about.png" width="500"/></td>
-  </tr>
-  <tr>
     <td align="center"><b>Hobbies</b></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/about.png" width="400"/></td>
+    <td><img src="docs/screenshots/hobbies.png" width="400"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Works</b></td>
     <td align="center"><b>Skills</b></td>
   </tr>
   <tr>
-    <td><img src="docs/screenshots/hobbies.png" width="400"/></td>
+    <td><img src="docs/screenshots/works.png" width="400"/></td>
     <td><img src="docs/screenshots/skills.png" width="400"/></td>
   </tr>
   <tr>
@@ -49,6 +54,7 @@
 - **Hero** — 3Dシーンと自己紹介
 - **About** — プロフィール
 - **Hobbies** — 趣味カード一覧
+- **Works** — 制作物・成果物
 - **Skills** — 経験のある技術
 - **Certifications** — 取得資格
 - **Contact** — Github・Email

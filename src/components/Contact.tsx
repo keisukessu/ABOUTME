@@ -52,7 +52,7 @@ export default function Contact({ isDark }: { isDark: boolean }) {
       <div className={styles.inner}>
         {/* Left */}
         <div className={styles.left}>
-          <span className={styles.sectionNum}>05</span>
+          <span className={styles.sectionNum}>06</span>
           <h2 className={styles.heading}>Contact</h2>
           <p className={styles.desc}>
             ご依頼・ご相談・ご質問など、お気軽にご連絡ください。
