@@ -100,8 +100,8 @@ const categories: Category[] = [
 
     icon: <SmartphoneIcon color="#fb8c00" />,
     techs: [
-      { name: 'Java\n(Android)', icon: `${D}/java/java-original.svg` },
-      { name: 'C#\n(Unity)', icon: `${D}/csharp/csharp-original.svg` },
+      { name: 'Android\nStudio', icon: `${D}/androidstudio/androidstudio-original.svg` },
+      { name: 'Unity', icon: `${D}/unity/unity-original.svg`, invertDark: true },
     ],
   },
   {
