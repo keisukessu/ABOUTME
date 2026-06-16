@@ -6,12 +6,13 @@
 
 ## デモ
 
-<div align="center">
-  <b>Hero</b><br/>
-  <img src="docs/screenshots/hero.png" width="800"/>
-</div>
-
 <table>
+  <tr>
+    <td align="center" colspan="2"><b>Hero</b></td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="docs/screenshots/hero.png" width="800"/></td>
+  </tr>
   <tr>
     <td align="center"><b>About</b></td>
     <td align="center"><b>Hobbies</b></td>
