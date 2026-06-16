@@ -1,4 +1,4 @@
-# Portfolio — Keisuke Sonoyama
+# ポートフォリオ — Keisuke Sonoyama
 
 個人ポートフォリオサイトです。React + Three.js で構築し、Cloudflare Pagesにデプロイしています。
 
