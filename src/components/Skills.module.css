@@ -300,7 +300,7 @@
 
 @media (max-width: 700px) {
   .techStack {
-    padding: 60px 32px 0;
+    padding: 60px 32px 60px;
   }
 
   .bannerLeft {
@@ -314,7 +314,7 @@
 
 @media (max-width: 480px) {
   .techStack {
-    padding: 48px 20px 0;
+    padding: 48px 20px 48px;
   }
 
   .heading {

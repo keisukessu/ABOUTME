@@ -224,7 +224,7 @@
 
 @media (max-width: 480px) {
   .works {
-    padding: 48px 20px;
+    padding: 48px 12px;
   }
 
   .heading {
@@ -234,18 +234,56 @@
 
   .grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 6px;
+  }
+
+  .cardImage {
+    height: 80px;
   }
 
   .cardInner {
-    padding: 16px 16px 18px;
+    padding: 8px 8px 10px;
+  }
+
+  .cardTop {
+    margin-bottom: 6px;
+    flex-direction: column;
+    gap: 4px;
   }
 
   .title {
-    font-size: 15px;
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+
+  .awards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .award {
+    font-size: 8px;
+    padding: 2px 5px;
   }
 
   .desc {
-    font-size: 12px;
+    font-size: 9px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+
+  .techList {
+    gap: 3px;
+    margin-bottom: 8px;
+  }
+
+  .tag {
+    font-size: 8px;
+    padding: 1px 5px;
+  }
+
+  .link {
+    font-size: 9px;
+    gap: 3px;
   }
 }
