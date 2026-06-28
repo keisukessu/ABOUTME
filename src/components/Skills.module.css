@@ -296,31 +296,11 @@
   .headerRight {
     padding-top: 0;
   }
-
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .card:nth-child(1),
-  .card:nth-child(2),
-  .card:nth-child(3),
-  .card:nth-child(4),
-  .card:nth-child(5) {
-    grid-column: span 1;
-  }
 }
 
 @media (max-width: 700px) {
   .techStack {
     padding: 60px 32px 0;
-  }
-
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .card:nth-child(n) {
-    grid-column: span 1;
   }
 
   .bannerLeft {
@@ -342,39 +322,38 @@
   }
 
   .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+    gap: 6px;
   }
 
   .card {
-    padding: 14px 12px 16px;
+    padding: 10px 8px 12px;
   }
 
   .cardHeader {
-    gap: 10px;
-    margin-bottom: 8px;
+    gap: 8px;
+    margin-bottom: 6px;
   }
 
   .cardIconWrap {
-    width: 36px;
-    height: 36px;
-    border-radius: 9px;
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
   }
 
   .cardTitle {
-    font-size: 13px;
+    font-size: 11px;
   }
 
   .techList {
-    gap: 8px 10px;
+    gap: 6px 8px;
   }
 
   .techIcon {
-    width: 26px;
-    height: 26px;
+    width: 22px;
+    height: 22px;
   }
 
   .techName {
-    font-size: 9px;
+    font-size: 8px;
   }
 }
